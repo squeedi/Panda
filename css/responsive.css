@@ -1,0 +1,267 @@
+/* Адаптивные стили для мобильных устройств */
+
+/* Планшеты */
+@media (max-width: 1024px) {
+    .container {
+        padding: 0 15px;
+    }
+    
+    .products-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
+    
+    .products-grid-large {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
+    
+    .store-section {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    
+    .store-section:nth-child(even) {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Мобильные устройства */
+@media (max-width: 768px) {
+    .container {
+        padding: 0 10px;
+    }
+    
+    .header .container {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .nav {
+        gap: 20px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .nav-link {
+        font-size: 16px;
+    }
+    
+    .hero-content h1 {
+        font-size: 48px;
+    }
+    
+    .hero-content p {
+        font-size: 18px;
+    }
+    
+    .hero-content .collection {
+        font-size: 16px;
+    }
+    
+    .section-title {
+        font-size: 36px;
+    }
+    
+    .products-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+    
+    .products-grid-large {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .instagram-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .footer-content {
+        flex-direction: column;
+        gap: 30px;
+        text-align: center;
+    }
+    
+    .social-links {
+        flex-direction: row;
+        justify-content: center;
+        gap: 20px;
+    }
+    
+    .product-detail-container {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    .favorites-container {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    .contact-blocks {
+        grid-template-columns: 1fr;
+    }
+    
+    .contact-block.large {
+        grid-column: 1;
+    }
+    
+    .store-images {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    
+    .store-image-placeholder {
+        height: 150px;
+    }
+}
+
+/* Маленькие мобильные устройства */
+@media (max-width: 480px) {
+    .container {
+        padding: 0 5px;
+    }
+    
+    .logo-img {
+        height: 40px;
+    }
+    
+    .logo-text {
+        font-size: 12px;
+    }
+    
+    .nav {
+        gap: 15px;
+    }
+    
+    .nav-link {
+        font-size: 14px;
+    }
+    
+    .hero-content h1 {
+        font-size: 36px;
+    }
+    
+    .hero-content p {
+        font-size: 16px;
+    }
+    
+    .section-title {
+        font-size: 28px;
+    }
+    
+    .products-grid {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+    
+    .product-placeholder {
+        height: 150px;
+        font-size: 16px;
+    }
+    
+    .product-placeholder-large {
+        height: 200px;
+        font-size: 18px;
+    }
+    
+    .promo-content h2 {
+        font-size: 36px;
+    }
+    
+    .promo-content p {
+        font-size: 18px;
+    }
+    
+    .instagram-placeholder {
+        height: 200px;
+        font-size: 16px;
+    }
+    
+    .addresses h3 {
+        font-size: 20px;
+    }
+    
+    .addresses p {
+        font-size: 14px;
+    }
+    
+    .social-link {
+        font-size: 16px;
+    }
+    
+    .products-header h1 {
+        font-size: 36px;
+    }
+    
+    .products-header h2 {
+        font-size: 18px;
+    }
+    
+    .product-details h1 {
+        font-size: 28px;
+    }
+    
+    .favorites-header h1 {
+        font-size: 36px;
+    }
+    
+    .contacts-container h1 {
+        font-size: 36px;
+    }
+    
+    .store-info {
+        padding: 20px;
+    }
+    
+    .store-info h2 {
+        font-size: 24px;
+    }
+    
+    .store-info .address {
+        font-size: 16px;
+    }
+    
+    .store-info .phone {
+        font-size: 14px;
+    }
+    
+    .store-info .hours {
+        font-size: 14px;
+    }
+}
+
+/* Очень маленькие экраны */
+@media (max-width: 320px) {
+    .hero-content h1 {
+        font-size: 28px;
+    }
+    
+    .section-title {
+        font-size: 24px;
+    }
+    
+    .products-header h1 {
+        font-size: 28px;
+    }
+    
+    .favorites-header h1 {
+        font-size: 28px;
+    }
+    
+    .contacts-container h1 {
+        font-size: 28px;
+    }
+    
+    .nav {
+        gap: 10px;
+    }
+    
+    .nav-link {
+        font-size: 12px;
+    }
+}
+
+

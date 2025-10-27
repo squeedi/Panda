@@ -1,0 +1,31 @@
+#scrollTop {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background-color: black;
+  color: white;
+  border: none;
+  padding: 10px 14px;
+  font-size: 18px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+/* Адаптивный дизайн */
+@media (max-width: 768px) {
+  #scrollTop {
+    bottom: 20px;
+    right: 20px;
+    padding: 8px 12px;
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  #scrollTop {
+    bottom: 15px;
+    right: 15px;
+    padding: 6px 10px;
+    font-size: 14px;
+  }
+}

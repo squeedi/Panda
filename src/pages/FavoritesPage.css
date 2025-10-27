@@ -1,0 +1,229 @@
+.favorites-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.favorites-section {
+  flex: 1;
+  padding: 60px 100px;
+  background-color: white;
+}
+
+.favorites-container {
+  display: flex;
+  gap: 60px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.favorites-header {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.favorites-header h1 {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  font-size: 48px;
+  margin-bottom: 30px;
+  color: #000;
+  text-align: center;
+}
+
+.product-image {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.product-image:hover {
+  transform: scale(1.02);
+}
+
+.product-image img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.favorites-details {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.product-info {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.info-row {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.info-row label {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  color: #000;
+}
+
+.info-row input,
+.info-row select {
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  background: white;
+}
+
+.info-row input:focus,
+.info-row select:focus {
+  outline: none;
+  border-color: #000;
+}
+
+.email-btn {
+  align-self: flex-start;
+  background: #000;
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: all 0.3s;
+  margin-top: 30px;
+}
+
+.email-btn:hover {
+  background: #333;
+  transform: translateY(-2px);
+}
+
+/* Адаптивный дизайн */
+@media (max-width: 1024px) {
+  .favorites-section {
+    padding: 50px 60px;
+  }
+  
+  .favorites-container {
+    gap: 40px;
+  }
+  
+  .favorites-header h1 {
+    font-size: 42px;
+  }
+  
+  .product-image {
+    max-width: 350px;
+  }
+  
+  .info-row label {
+    font-size: 15px;
+  }
+  
+  .info-row input,
+  .info-row select {
+    font-size: 15px;
+    padding: 10px;
+  }
+  
+  .email-btn {
+    font-size: 15px;
+    padding: 12px 25px;
+  }
+}
+
+@media (max-width: 768px) {
+  .favorites-section {
+    padding: 30px 20px;
+  }
+  
+  .favorites-container {
+    flex-direction: column;
+    gap: 30px;
+  }
+  
+  .favorites-header h1 {
+    font-size: 36px;
+  }
+  
+  .product-image {
+    max-width: 100%;
+  }
+  
+  .info-row {
+    gap: 6px;
+  }
+  
+  .info-row label {
+    font-size: 14px;
+  }
+  
+  .info-row input,
+  .info-row select {
+    font-size: 14px;
+    padding: 10px;
+  }
+  
+  .email-btn {
+    font-size: 14px;
+    padding: 12px 20px;
+    align-self: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .favorites-section {
+    padding: 20px 15px;
+  }
+  
+  .favorites-container {
+    gap: 20px;
+  }
+  
+  .favorites-header h1 {
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+  
+  .product-info {
+    gap: 15px;
+  }
+  
+  .info-row {
+    gap: 5px;
+  }
+  
+  .info-row label {
+    font-size: 12px;
+  }
+  
+  .info-row input,
+  .info-row select {
+    font-size: 12px;
+    padding: 8px;
+  }
+  
+  .email-btn {
+    font-size: 12px;
+    padding: 10px 15px;
+    margin-top: 20px;
+  }
+}
+
