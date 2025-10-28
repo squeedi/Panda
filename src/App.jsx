@@ -1,29 +1,35 @@
-// src/App.jsx
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import React, { useState } from 'react';
 import Header from './components/Header';
-import Footer from './components/Footer';
-import Home from './pages/Home';
-import Products from './pages/Products';
-import About from './pages/About';
-import Contacts from './pages/Contacts';
-import Favorites from './pages/Favorites';
+import HomePage from './pages/HomePage';
+import FavoritesPage from './pages/FavoritesPage';
+import ProductsPage from './pages/ProductsPage';
+import ContactsPage from './pages/ContactsPage';
+import AboutPage from './pages/AboutPage';
+import './App.css';
 
-function App() {
+export default function App() {
+  const [currentPage, setCurrentPage] = useState('home');
+
+  const renderPage = () => {
+    switch (currentPage) {
+      case 'home':
+        return <HomePage currentPage={currentPage} setCurrentPage={setCurrentPage} />;
+      case 'favorites':
+        return <FavoritesPage currentPage={currentPage} setCurrentPage={setCurrentPage} />;
+      case 'products':
+        return <ProductsPage currentPage={currentPage} setCurrentPage={setCurrentPage} />;
+      case 'contacts':
+        return <ContactsPage currentPage={currentPage} setCurrentPage={setCurrentPage} />;
+      case 'about':
+        return <AboutPage currentPage={currentPage} setCurrentPage={setCurrentPage} />;
+      default:
+        return <HomePage currentPage={currentPage} setCurrentPage={setCurrentPage} />;
+    }
+  };
+
   return (
-    <Router>
-      <Header />
-      <main>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/products" element={<Products />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/contacts" element={<Contacts />} />
-          <Route path="/favorites" element={<Favorites />} />
-        </Routes>
-      </main>
-      <Footer />
-    </Router>
+    <div className="App">
+      {renderPage()}
+    </div>
   );
 }
-
-export default App;
