@@ -11,21 +11,21 @@ export default function AboutPage({ currentPage, setCurrentPage }) {
       address: 'просп. Дзержинского, 104Б этаж 2',
       phones: ['+375 29 770-63-54', '+375 29 599-99-38'],
       hours: 'Ежедневно, 10:00-21:00',
-      images: ['../assets/titan1.jpg', '../assets/titan2.jpg', '../assets/titan3.jpg']
+      images: ['./assets/titan1.jpg', './assets/titan2.jpg', './assets/titan3.jpg']
     },
     {
       name: 'ТРЦ «Palazzo»',
       address: 'ул. Тимирязева, 74А ТРЦ Palazzo, этаж 1',
       phones: ['+375 24 910-28-31', '+375 29 599-99-38', '+375 29 649-95-95', '+375 29 849-95-95'],
       hours: 'Ежедневно, 10:00-22:00',
-      images: ['../assets/palazzo1.jpg', '../assets/palazzo2.jpg', '../assets/palazzo3.jpg']
+      images: ['./assets/palazzo1.jpg', './assets/palazzo2.jpg', './assets/palazzo3.jpg']
     },
     {
       name: 'ТЦ "Момо"',
       address: 'Партизанский просп., 150А этаж 2',
       phones: ['Магазин точки PANDA +375 29 565-80-34', 'Фирма PANDA (Белтелеком) +375 24 910-28-31', 'Фирма PANDA (Velcom) +375 29 649-95-95', 'Фирма PANDA (MTC) +375 29 849-95-95'],
       hours: 'Ежедневно, 10:00-22:00',
-      images: ['../assets/momo1.jpg', '../assets/momo2.jpg', '../assets/momo3.jpg']
+      images: ['./assets/momo1.jpg', './assets/momo2.jpg', './assets/momo3.jpg']
     }
   ];
 
