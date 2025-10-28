@@ -93,7 +93,7 @@ body {
 
 /* ===== HOME PAGE STYLES ===== */
 .home-page {
-    background-image: url({`${process.env.PUBLIC_URL}/assets/PANDA.jpg`});
+    background-image: url('../assets/PANDA.jpg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -132,7 +132,7 @@ body {
 }
 
 .other-page .logo-img {
-    content: url({`${process.env.PUBLIC_URL}/assets/logo_mob_black.png`});
+    content: url('../images/logo-black.png');
 }
 
 /* Черная полоса под header для других страниц */
@@ -237,7 +237,7 @@ body {
 /* ===== PROMO BANNER ===== */
 .promo-banner {
     height: 400px;
-    background-image: url({`${process.env.PUBLIC_URL}/assets/PANDA.jpg`});
+    background-image: url('../assets/PANDA.jpg');
     display: flex;
     align-items: center;
     justify-content: center;

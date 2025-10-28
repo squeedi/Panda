@@ -2,9 +2,9 @@ import './InstagramSection.css';
 
 export default function InstagramSection() {
   const instagramImages = [
-    '{`${process.env.PUBLIC_URL}/assets/inst1.jpg`}',
-   '{`${process.env.PUBLIC_URL}/assets/inst2.jpg`}',
-   '{`${process.env.PUBLIC_URL}/assets/inst3.jpg`}',
+    '../assets/inst1.jpg',
+    '../assets/inst2.jpg',
+    '../assets/inst3.jpg',
   ];
 
   return (
