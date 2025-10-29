@@ -28,6 +28,9 @@
 
 /* Мобильные устройства */
 @media (max-width: 768px) {
+    .hero{
+        height: 100px;
+    }
     .container {
         padding: 0 10px;
     }
