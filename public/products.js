@@ -2,7 +2,7 @@
 
 // Данные товаров (в реальном проекте будут загружаться с сервера)
 const productsData = [
-    { id: 1, name: 'Товар 1', size: 'Размер 1', price: ' BYN', image: 'product1.jpg' },
+    { id: 1, name: 'Товар 1', size: 'Размер 1', price: '100 BYN', image: 'product1.jpg' },
     { id: 2, name: 'Товар 2', size: 'Размер 2', price: ' BYN', image: 'product2.jpg' },
     { id: 3, name: 'Товар 3', size: 'Размер 3', price: ' BYN', image: 'product3.jpg' },
     { id: 4, name: 'Товар 4', size: 'Размер 4', price: ' BYN', image: 'product4.jpg' },
@@ -32,28 +32,26 @@ async function initProductsPage() {
 async function loadProducts() {
     const productsGrid = document.querySelector('.products-grid-large');
     if (!productsGrid) return;
-    
-    // Показываем индикатор загрузки
-    productsGrid.innerHTML = '<div class="loading">Загрузка товаров...</div>';
-    
-    try {
-        // Используем API для загрузки товаров
-        const response = await window.API.getProducts(currentPage, productsPerPage);
-        
-        if (response.success) {
-            const products = response.data.products;
-            productsGrid.innerHTML = '';
-            
-            products.forEach(product => {
-                const productCard = createProductCard(product);
-                productsGrid.appendChild(productCard);
-            });
-        } else {
-            throw new Error(response.error);
-        }
-    } catch (error) {
-        productsGrid.innerHTML = '<div class="error">Ошибка загрузки товаров: ' + error.message + '</div>';
-    }
+
+    productsGrid.innerHTML = '';
+    const start = (currentPage - 1) * productsPerPage;
+    const end = start + productsPerPage;
+
+    productsData.slice(start, end).forEach(product => {
+        const card = document.createElement('div');
+        card.className = 'product-card-large';
+        card.innerHTML = `
+            <div class="product-image">
+                <img src="${product.image}" alt="${product.name}" />
+            </div>
+            <div class="product-info">
+                <h3>${product.name}</h3>
+                <p>${product.size}</p>
+                <p>${product.price}</p>
+            </div>
+        `;
+        productsGrid.appendChild(card);
+    });
 }
 
 // Создание карточки товара

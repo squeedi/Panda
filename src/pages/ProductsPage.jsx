@@ -13,6 +13,8 @@ export default function ProductsPage({ currentPage, setCurrentPage }) {
     { id: 6, name: 'Брюки "Офис"', size: 'S, M, L', image: '/assets/PANDA.png' }
   ];
 
+  const totalPages = 2; // Пример
+
   return (
     <div className="products-page">
       <Header currentPage={currentPage} setCurrentPage={setCurrentPage} />
@@ -35,7 +37,13 @@ export default function ProductsPage({ currentPage, setCurrentPage }) {
           ))}
         </div>
         <div className="pagination">
-          <span>1 </span>
+          <button onClick={() => setCurrentPage(currentPage - 1)} disabled={currentPage === 1}>
+            Назад
+          </button>
+          <span>Страница {currentPage}</span>
+          <button onClick={() => setCurrentPage(currentPage + 1)} disabled={currentPage === totalPages}>
+            Вперед
+          </button>
         </div>
       </div>
       <Footer />
